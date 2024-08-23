@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:guide x="212.5370964678831" y="348.47928059062895" angle="0"/>
+    <bx:guide x="341.61719436453143" y="268.3605376605287" angle="90"/>
+    <bx:guide x="439.540045792329" y="358.1231349616279" angle="0"/>
+  </defs>
+  <path d="M 240.356 64.355 L 456.603 496.848 L 24.11 496.848 L 240.356 64.355 Z" style="fill: white; stroke: none;" bx:shape="triangle 24.11 64.355 432.493 432.493 0.5 0 1@122dbcfa"/>
+</svg>
