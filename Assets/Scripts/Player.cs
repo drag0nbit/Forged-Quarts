@@ -9,9 +9,6 @@ public class Player : MonoBehaviour
     private VelocityManager velocity;
     private InventoryManager inventory;
 
-    [Header("Attributes")]
-    [SerializeField] private float speed = 6.0f;
-
     // Health bar variables
     [Header("Health Bar")]
     [SerializeField] private GameObject hpFill;

@@ -19,6 +19,6 @@ public class EnergyManager : MonoBehaviour
 
     private void Clamp()
     {
-        energy = Mathf.Clamp(energy, maxEnergy, 0);
+        energy = Mathf.Clamp(energy, 0, maxEnergy);
     }
 }

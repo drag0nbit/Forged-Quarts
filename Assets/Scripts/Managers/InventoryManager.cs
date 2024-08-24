@@ -62,8 +62,9 @@ public class InventoryManager : MonoBehaviour
 
     public bool EnoughCost(float cost, bool blood)
     {
-        if (blood) return health.health > cost;
-        else return energy.energy >= cost;
+        if (health != null && blood) return health.health > cost;
+        else if (energy != null) return energy.energy >= cost;
+        return true;
     }
 
     private void ApplyCost(float cost, bool blood)

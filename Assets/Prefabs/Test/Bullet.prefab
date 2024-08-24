@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4242129805097445207}
   - component: {fileID: 6697744789633614501}
   - component: {fileID: 2656058667694188570}
+  - component: {fileID: 3802884752153277695}
   m_Layer: 0
   m_Name: Death
   m_TagString: Untagged
@@ -4830,6 +4831,20 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &3802884752153277695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843723327119648291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8091d5834a7f543b6dae8673146c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 2
+  active: 0
 --- !u!1 &7031526968649485028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4847,7 +4862,7 @@ GameObject:
   - component: {fileID: 6574481597894078988}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4895,6 +4910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 5
+  active: 1
 --- !u!58 &8198648254452664754
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4907,7 +4923,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -4955,7 +4971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdc94b2d0f11e045ae5d54fd1ad56e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  death_particle: {fileID: 6697744789633614501}
+  death_object: {fileID: 843723327119648291}
+  enableLifetime: 1
 --- !u!114 &6574481597894078988
 MonoBehaviour:
   m_ObjectHideFlags: 0

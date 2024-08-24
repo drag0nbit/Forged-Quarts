@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 3025369963049862601}
   - component: {fileID: 5823611298635410616}
   - component: {fileID: 6959826565832105211}
+  - component: {fileID: 8995537847276464743}
+  - component: {fileID: 5440869844341232053}
+  - component: {fileID: 4958393858369215530}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -49,8 +52,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9209ccf3e3a5c8d468fa4635d8d59ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 6bd8685affbe90940820502150ad7b19, type: 2}
-  speed: 30
 --- !u!50 &532336916458724572
 Rigidbody2D:
   serializedVersion: 4
@@ -90,7 +91,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -107,7 +108,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -141,6 +142,69 @@ MonoBehaviour:
   health: 2
   maxHealth: 2
   destroyOnDeath: 1
+--- !u!114 &8995537847276464743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457591303086029017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9d508cc5c9cf041807a6ffb36cc9f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots: 1
+  inventory:
+  - {fileID: 11400000, guid: 6bd8685affbe90940820502150ad7b19, type: 2}
+--- !u!114 &5440869844341232053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457591303086029017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b953fc5a2b35a9d4b8f6ea0c44d65726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+--- !u!58 &4958393858369215530
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457591303086029017}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 5
 --- !u!1001 &4652557492205847128
 PrefabInstance:
   m_ObjectHideFlags: 0

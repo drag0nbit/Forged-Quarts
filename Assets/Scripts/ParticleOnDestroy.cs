@@ -2,16 +2,19 @@ using UnityEngine;
 
 public class ParticleOnDestroy : MonoBehaviour
 {
-    public ParticleSystem death_particle;
+    public GameObject death_object;
+    public bool enableLifetime = true;
 
     private void OnDestroy()
     {
-        if (death_particle != null)
+        if (death_object != null)
         {
-            ParticleSystem particleInstance = Instantiate(death_particle, transform.position, Quaternion.identity);
-            var main = particleInstance.main;
+            GameObject obj = Instantiate(death_object, transform.position, Quaternion.identity);
+            ParticleSystem particles = obj.GetComponent<ParticleSystem>();
+            var main = particles.main;
             main.playOnAwake = true;
-            particleInstance.Play();
+            particles.Play();
+            if (enableLifetime) obj.GetComponent<Lifetime>()?.Activate();
         }
     }
 }
